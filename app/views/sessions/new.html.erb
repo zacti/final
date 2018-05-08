@@ -1,0 +1,8 @@
+<h1>Login</h1>
+
+<%= form_for(:session, url: login_path) do |f| %>
+	  Email: <%= text_field_tag :email %>
+	  Password: <%= password_field_tag :password %>
+  	<%= submit_tag "Submit", class: "btn btn-primary"%>
+  	<%= link_to "forgot password",new_password_reset_path ,class: "btn btn-primary" %>
+<% end %>
