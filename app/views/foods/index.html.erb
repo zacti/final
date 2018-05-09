@@ -1,0 +1,9 @@
+<h1>Restaurant</h1>
+
+<% @food.each do |f| %>
+<%= f.name %>
+<%= f.location %>
+<%=f.price %>
+<% end %>
+
+<%= link_to 'Create Your Listing', new_food_path %>

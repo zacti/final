@@ -8,4 +8,5 @@ Rails.application.routes.draw do
 	post '/login' => 'sessions#create'
 	get '/logout' => 'sessions#destroy'
 	get "/auth/google_oauth2/callback" => "users#google_oauth2"
+	resources "foods"
 end
