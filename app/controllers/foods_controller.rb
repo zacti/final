@@ -14,7 +14,7 @@ class FoodsController < ApplicationController
 	end
 
 	def create
-		@food = current_user.food.new(food_params)
+		@food = current_user.foods.new(food_params)
 		if @food.save
 			redirect_to root_path
 		else
@@ -53,10 +53,10 @@ class FoodsController < ApplicationController
     end
 
     def food_params
-      params.require(:foods).permit(:name, :price, :location, :description, {image:[]})
+      params.require(:food).permit(:item, :price, :location, :description, {image:[]})
     end
 
     def filtering_params(params)
-    	params.slice(:name , :location)
+    	params.slice(:item , :location)
     end
 end

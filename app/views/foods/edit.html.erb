@@ -1,0 +1,24 @@
+Edit your restaurant
+<%= form_for @food do |f| %>
+
+<div class="food_field">
+<%= f.label :item %>
+<%= f.text_field :item %>
+</div>
+
+<div class="food_field">
+<%= f.label :location %>
+<%= f.text_field :location %>
+</div>
+
+<div class="furniture_field">
+<%= f.label :price %>
+<%= f.text_field :location %></div>
+
+<div class="furniture_field">
+<%= f.file_field :image %>
+<%= f.submit 'Upload' %>
+</div>
+
+<% end %>
+
