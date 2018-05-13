@@ -13,4 +13,15 @@
  *= require_tree .
  *= require_self
  */
-@import "home"
+@import "home";
+@import "foods";
+body, html {
+	font-family: "Lato", sans-serif;
+    height: 100%;
+    color: #777;
+    font-size: 20px;
+}
+div#alllist {
+	display: inline;
+}
+

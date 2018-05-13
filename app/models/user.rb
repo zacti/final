@@ -5,7 +5,6 @@ class User < ApplicationRecord
   validates_format_of :email,:with => /\A[^@\s]+@([^@\s]+\.)+[^@\s]+\z/
   before_create {generate_token(:auth_token)}
 
-  mount_uploader :image, ImageUploader
 
   def user?
       self.type == "User"
