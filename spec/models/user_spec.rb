@@ -11,8 +11,8 @@ RSpec.describe User, :type => :model do
   	end
 
 	describe "associations" do
-   		it "check has_many food" do
-   			expect(user).to have_many(:foods)
+   		it "check has_many furniture" do
+   			expect(user).to have_many(:furnitures)
    		end
    	end
 end
